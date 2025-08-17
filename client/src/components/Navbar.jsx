@@ -10,7 +10,7 @@ const Navbar = () => {
       <img
         src={assets.logo2}
         alt="logo"
-        className="w-44 sm:w-52"
+        className="w-44 sm:w-52 cursor-pointer"
         onClick={() => navigate("/")}
       />
       <button className="flex items-center gap-2 rounded-full text-sm cursor-pointer bg-blue-600 text-white px-10 py-2.5">Get Started <ArrowRight className="w-4 h-4" /></button>

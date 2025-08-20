@@ -1,6 +1,8 @@
 import logo from "./logo.png";
 import logo2 from "./logo2.svg"
 import group from "./group.png";
+import start_svg from "./star.svg";
+import star_dull from "./star_dull_icon.svg";
 import { SquarePen, Type, Image, Eraser, Scissors, FileText } from "lucide-react";
 
 
@@ -8,7 +10,10 @@ import { SquarePen, Type, Image, Eraser, Scissors, FileText } from "lucide-react
 export const assets = {
     logo,
     logo2,
-    group
+    group,
+    start_svg,
+    star_dull
+    
 }
 
 

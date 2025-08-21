@@ -67,3 +67,41 @@ export const AiToolsData = [
         path: "/ai/review-resume",
     },
 ];
+
+
+export const dummyCreationData = [
+    {
+      id: 12,
+      user_id: "user_2yMX02PRbyMtQK6PebpjnxvRNIA",
+      prompt: "Generate 5 catchy blog titles for a Travel blog focusing on budget travel tips.",
+      content: "Here are some creative title options for a budget travel blog:\n\n**Catchy & Relatable:**\n- Wander More, Spend Less\n- Globe-Trotting on a Shoestring\n- The Frugal Explorer: Budget Travel Hacks\n\n**Playful & Creative:**\n- Jet Lag, Not Debt\n- Adventure Without the Price Tag",
+      type: "blog-title",
+      publish: false,
+      likes: [],
+      created_at: "2025-07-15T10:09:50.492Z",
+      updated_at: "2025-07-15T10:09:50.492Z",
+    },
+    {
+      id: 11,
+      user_id: "user_2yMX02PRbyMtQK6PebpjnxvRNIA",
+      prompt: "Generate blog titles for a Food blog about healthy recipes and nutrition.",
+      content: "Here are some blog title ideas for a healthy food blog:\n\n**Direct & Informative:**\n- Everyday Healthy Recipes\n- Nutritious Bites: Simple Meals for Better Living\n\n**Creative & Fun:**\n- Eat Well, Feel Great\n- Flavor Meets Fitness\n- Green Plates & Good Vibes",
+      type: "blog-title",
+      publish: false,
+      likes: [],
+      created_at: "2025-07-15T09:08:10.450Z",
+      updated_at: "2025-07-15T09:08:10.450Z",
+    },
+    {
+      id: 10,
+      user_id: "user_2yMX02PRbyMtQK6PebpjnxvRNIA",
+      prompt: "Write a short article about How AI is Changing Digital Marketing (500–700 words).",
+      content: "## How AI is Transforming Digital Marketing\n\nArtificial Intelligence (AI) has quickly become one of the most powerful forces shaping digital marketing. From personalized recommendations to automated ad targeting, AI is enabling businesses to connect with customers more effectively than ever.\n\n**1. Smarter Personalization**\nAI analyzes user behavior and purchase history to deliver highly tailored content and product recommendations. This level of personalization was once impossible at scale.\n\n**2. Automated Ad Campaigns**\nPlatforms like Google Ads and Facebook now leverage AI to automatically adjust bidding, targeting, and placement — maximizing ROI while reducing manual effort.\n\n**3. Chatbots & Customer Support**\nAI-powered chatbots can now resolve customer queries instantly, handle sales inquiries, and even recommend products, improving engagement 24/7.\n\n**4. Predictive Analytics**\nMarketers use AI tools to forecast customer behavior, spot trends, and identify high-value leads. This ensures campaigns are more data-driven and effective.\n\n**Conclusion**\nAI isn’t replacing marketers — it’s empowering them. By automating repetitive tasks and delivering actionable insights, AI frees up creative teams to focus on strategy, storytelling, and building stronger customer relationships.",
+      type: "article",
+      publish: false,
+      likes: [],
+      created_at: "2025-07-15T09:07:51.312Z",
+      updated_at: "2025-07-15T09:07:51.312Z",
+    },
+  ];
+  

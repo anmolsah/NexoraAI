@@ -19,14 +19,14 @@ const WriteArticle = () => {
         onSubmit={onSubmitHandler}
         className="w-full max-w-lg p-4 bg-white rounded-lg border border-gray-200"
       >
-        <div className="w-full max-w-lg p-4 bg-white rounded-lg border border-gary-200">
+        <div className="flex items-center gap-3">
           <Sparkles className="w-6 text-[#4A7AFF]" />
           <h1 className="text-xl font-semibold">Article Configuration</h1>
         </div>
         <p className="mt-6 text-sm font-medium">Article Topic</p>
         <input
           type="text"
-          className="w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gary-300"
+          className="w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300"
           placeholder="Current skills to master.."
           required
           onChange={(e) => setInput(e.target.value)}

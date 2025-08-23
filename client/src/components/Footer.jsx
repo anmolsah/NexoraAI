@@ -15,8 +15,7 @@ const Footer = () => {
             onClick={() => navigate("/")}
           />
           <p className="mt-6 text-sm">
-            Experinace the power of NexoraAI with our AI tools.{" "}
-            <br />
+            Experinace the power of NexoraAI with our AI tools. <br />
             Transform your content creation with our suite of premium AI tools.
             Write articles,generate images, and more with ease. <br />
             Start for free and upgrade later to unlock more features and tools.
@@ -64,8 +63,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="pt-4 text-center text-xs md:text-sm pb-5">
-        Copyright 2025 © NexoraAI. All
-        Right Reserved.
+        Copyright 2025 © NexoraAI. All Right Reserved.
       </p>
     </footer>
   );

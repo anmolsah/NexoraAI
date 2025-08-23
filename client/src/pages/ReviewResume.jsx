@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ReviewResume = () => {
-  return (
-    <div>ReviewResume</div>
-  )
-}
+  return <div>ReviewResume</div>;
+};
 
-export default ReviewResume
+export default ReviewResume;

@@ -45,7 +45,7 @@ const GenerateImages = () => {
         className="w-full max-w-lg p-4 bg-white rounded-lg border border-gray-200"
       >
         <div className="flex items-center gap-3">
-          <Sparkles className="w-6 text-[#8E37EB]" />
+          <Sparkles className="w-6 text-[#00AD25]" />
           <h1 className="text-xl font-semibold">AI Image Generator</h1>
         </div>
         <p className="mt-6 text-sm font-medium">Describe Your Image</p>

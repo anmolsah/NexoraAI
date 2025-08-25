@@ -5,8 +5,8 @@ import axios from "axios";
 import { v2 as cloudinary } from "cloudinary";
 
 const AI = new OpenAI({
-  apiKey: process.env.GEMINI_API_KEY,
-  baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
+  apiKey: process.env.OPENROUTER_API_KEY,
+  baseURL: "https://openrouter.ai/api/v1",
 });
 
 export const generateArticle = async (req, res) => {
@@ -24,7 +24,7 @@ export const generateArticle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "gemini-2.0-flash",
+      model: "openai/gpt-oss-20b:free",
       messages: [
         {
           role: "user",
@@ -68,7 +68,7 @@ export const generateBlogTitle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "gemini-2.0-flash",
+      model: "openai/gpt-oss-20b:free",
       messages: [
         {
           role: "user",

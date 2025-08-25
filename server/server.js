@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 app.use(requireAuth());
 
-app.use("/api/ai",aiRouter);
+app.use("/api/ai", aiRouter);
 
 const PORT = process.env.PORT || 8888;
 

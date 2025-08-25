@@ -6,5 +6,4 @@ const aiRouter = express.Router();
 
 aiRouter.post("/generate-article", auth, generateArticle);
 
-
 export default aiRouter;

@@ -11,6 +11,12 @@ const AI = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
 });
 
+
+//   const AI = new OpenAI({
+//     apiKey: process.env.GEMINI_API_KEY,
+//     baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
+//  });
+
 export const generateArticle = async (req, res) => {
   try {
     const { userId } = req.auth();
@@ -26,8 +32,14 @@ export const generateArticle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "openai/gpt-oss-20b:free",
+      model: "deepseek/deepseek-r1:free",
       messages: [
+        {
+          role: "system",
+          content:
+            "You are a professional article writer. Always write full articles directly. Do not explain your reasoning, do not include planning notes. Respond only with the final article in a clean, reader-friendly style with headings and paragraphs.",
+        },
+
         {
           role: "user",
           content: prompt,

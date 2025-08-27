@@ -32,7 +32,7 @@ export const generateArticle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "deepseek/deepseek-r1:free",
+      model: "deepseek/deepseek-r1-0528:free",
       messages: [
         {
           role: "system",

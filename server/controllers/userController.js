@@ -24,7 +24,7 @@ export const getPublishCreations = async (req, res) => {
   }
 };
 
-export const toggleLikeCreations = async (req, res) => {
+export const getToggleLikeCreations = async (req, res) => {
   try {
     const { userId } = req.auth();
     const { id } = req.body;

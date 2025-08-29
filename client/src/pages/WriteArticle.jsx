@@ -25,11 +25,7 @@ const WriteArticle = () => {
     try {
       setLoading(true);
       const prompt = `Write an article about ${input} in ${selectedLength.text}`;
-//       const prompt = `Write a complete article on the topic: "${input}". 
-// Length: ${selectedLength.text}. 
-// Respond ONLY with the finished article. 
-// The output must include a clear title and subheadings. 
-// `;
+
 
       const { data } = await axios.post(
         "/api/ai/generate-article",

@@ -241,7 +241,7 @@ export const resumeReview = async (req, res) => {
     const prompt = `Review the following resume and provide constructive feedback on its strengths, weaknesses, and areas for improvement. The resume content is as follows:\n\n${pdfData.text}`;
 
     const response = await AI.chat.completions.create({
-      model: "deepseek/deepseek-r1-0528:free",
+      model: "deepseek/deepseek-chat-v3-0324:free",
       messages: [
         {
           role: "user",

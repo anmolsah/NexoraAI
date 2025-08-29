@@ -11,7 +11,6 @@ const AI = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
 });
 
-
 //   const AI = new OpenAI({
 //     apiKey: process.env.GEMINI_API_KEY,
 //     baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
@@ -32,7 +31,7 @@ export const generateArticle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "deepseek/deepseek-r1-0528:free",
+      model: "meta-llama/llama-3.1-8b-instruct",
       messages: [
         {
           role: "system",
@@ -82,7 +81,7 @@ export const generateBlogTitle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "openai/gpt-oss-20b:free",
+      model: "meta-llama/llama-3.1-8b-instruct",
       messages: [
         {
           role: "user",

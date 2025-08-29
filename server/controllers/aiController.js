@@ -11,10 +11,6 @@ const AI = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
 });
 
-//   const AI = new OpenAI({
-//     apiKey: process.env.GEMINI_API_KEY,
-//     baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
-//  });
 
 export const generateArticle = async (req, res) => {
   try {
@@ -31,7 +27,7 @@ export const generateArticle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "meta-llama/llama-3.1-8b-instruct",
+      model: "deepseek/deepseek-r1-0528:free",
       messages: [
         {
           role: "system",
@@ -81,7 +77,7 @@ export const generateBlogTitle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "meta-llama/llama-3.1-8b-instruct",
+      model: "deepseek/deepseek-r1-0528:free",
       messages: [
         {
           role: "user",
@@ -245,7 +241,7 @@ export const resumeReview = async (req, res) => {
     const prompt = `Review the following resume and provide constructive feedback on its strengths, weaknesses, and areas for improvement. The resume content is as follows:\n\n${pdfData.text}`;
 
     const response = await AI.chat.completions.create({
-      model: "meta-llama/llama-3.1-8b-instruct",
+      model: "deepseek/deepseek-r1-0528:free",
       messages: [
         {
           role: "user",

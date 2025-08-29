@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useUser } from "@clerk/clerk-react";
+import { useUser,useAuth } from "@clerk/clerk-react";
 import { dummyPublishedCreationData } from "../assets/assets";
 import { Heart } from "lucide-react";
 import axios from "axios";
-import { useAuth } from "@clerk/clerk-react";
 import toast from "react-hot-toast";
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
@@ -33,6 +32,28 @@ const Community = () => {
     setLoading(false);
   };
 
+  const imageToggleLikes = async (id) => {
+    try {
+      const { data } = await axios.post(
+        "/api/user/toggle-like-creations",
+        { id },
+        {
+          headers: {
+            Authorization: `Bearer ${await getToken()}`,
+          },
+        }
+      );
+      if (data.success) {
+        toast.success(data.message);
+        await fetchCreation();
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   useEffect(() => {
     if (user) {
       fetchCreation();
@@ -59,6 +80,7 @@ const Community = () => {
               <div className="flex gap-1 items-center">
                 <p>{creation.likes.length}</p>
                 <Heart
+                  onClick={() => imageToggleLikes(creation.id)}
                   className={`min-w-5 h-5 hover:scale-110 cursor-pointer ${
                     creation.likes.includes(user.id)
                       ? "fill-red-500 text-red-600"

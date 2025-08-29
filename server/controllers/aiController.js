@@ -27,7 +27,7 @@ export const generateArticle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "deepseek/deepseek-r1-0528:free",
+      model: "deepseek/deepseek-chat-v3-0324:free",
       messages: [
         {
           role: "system",
@@ -77,7 +77,7 @@ export const generateBlogTitle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "deepseek/deepseek-r1-0528:free",
+      model: "deepseek/deepseek-chat-v3-0324:free",
       messages: [
         {
           role: "user",

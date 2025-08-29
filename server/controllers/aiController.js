@@ -245,7 +245,7 @@ export const resumeReview = async (req, res) => {
     const prompt = `Review the following resume and provide constructive feedback on its strengths, weaknesses, and areas for improvement. The resume content is as follows:\n\n${pdfData.text}`;
 
     const response = await AI.chat.completions.create({
-      model: "openai/gpt-oss-20b:free",
+      model: "meta-llama/llama-3.1-8b-instruct",
       messages: [
         {
           role: "user",

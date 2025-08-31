@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ClerkProvider } from '@clerk/clerk-react'
 
 
-// Publishable key from clerk
+
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
 if (!PUBLISHABLE_KEY) {

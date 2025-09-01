@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ClerkProvider } from '@clerk/clerk-react'
 
 
-//Get the key from Clerk website
+
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
 if (!PUBLISHABLE_KEY) {
@@ -20,3 +20,4 @@ createRoot(document.getElementById("root")).render(
   </ClerkProvider>
   
 );
+

@@ -169,9 +169,6 @@ NexoraAI/
 - **Error Handling**: Comprehensive error handling and user feedback
 - **Scalable Architecture**: Well-organized, maintainable code structure
 
-## 📧 Contact
-
-For any questions or inquiries, please reach out through the contact information provided in the application.
 
 ---
 

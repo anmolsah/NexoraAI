@@ -22,7 +22,7 @@ const Footer = () => {
         </p>
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com"
+            href="https://github.com/anmolsah"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 hover:text-gray-900 transition-transform duration-300 transform hover:scale-125"
@@ -30,7 +30,7 @@ const Footer = () => {
             <Github className="w-6 h-6" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/anmol-sah-551083238/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 hover:text-blue-600 transition-transform duration-300 transform hover:scale-125"

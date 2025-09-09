@@ -1,69 +1,46 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+import { Github, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <footer className="px-6 md:px-16 lg:px-24 xl:px-32 pt-8 w-full text-gray-500">
-      <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6">
-        <div className="md:max-w-96">
+    <footer className="px-6 md:px-16 lg:px-24 xl:px-32 py-8 w-full bg-white text-gray-600">
+      <div className="flex flex-col items-center text-center gap-6 border-b border-gray-200 pb-8">
+        <div>
           <img
             src={assets.logo2}
             alt="logo"
-            className="h-14 cursor-pointer"
+            className="h-16 cursor-pointer"
             onClick={() => navigate("/")}
           />
-          <p className="mt-6 text-sm">
-            Experinace the power of NexoraAI with our AI tools. <br />
-            Transform your content creation with our suite of premium AI tools.
-            Write articles,generate images, and more with ease. <br />
-            Start for free and upgrade later to unlock more features and tools.
-          </p>
         </div>
-        <div className="flex-1 flex items-start md:justify-end gap-20">
-          <div>
-            <h2 className="font-semibold mb-5 text-gray-800">Company</h2>
-            <ul className="text-sm space-y-2">
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">About us</a>
-              </li>
-              <li>
-                <a href="#">Contact us</a>
-              </li>
-              <li>
-                <a href="#">Privacy policy</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 className="font-semibold text-gray-800 mb-5">
-              Subscribe to our newsletter
-            </h2>
-            <div className="text-sm space-y-2">
-              <p>
-                The latest news, articles, and resources, sent to your inbox
-                weekly.
-              </p>
-              <div className="flex items-center gap-2 pt-4">
-                <input
-                  className="border border-gray-500/30 placeholder-gray-500 focus:ring-2 ring-indigo-600 outline-none w-full max-w-64 h-9 rounded px-2"
-                  type="email"
-                  placeholder="Enter your email"
-                />
-                <button className="bg-[#173054] w-24 h-9 text-white rounded">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
+        <p className="max-w-lg text-sm">
+          Experience the power of AI. NexoraAI provides a suite of tools to
+          transform your content creation process.
+        </p>
+        <div className="flex items-center gap-6">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-gray-900 transition-transform duration-300 transform hover:scale-125"
+          >
+            <Github className="w-6 h-6" />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-blue-600 transition-transform duration-300 transform hover:scale-125"
+          >
+            <Linkedin className="w-6 h-6" />
+          </a>
         </div>
       </div>
-      <p className="pt-4 text-center text-xs md:text-sm pb-5">
-        Copyright 2025 © NexoraAI. All Right Reserved.
+      <p className="pt-6 text-center text-sm pb-4">
+        Copyright {new Date().getFullYear()} © NexoraAI. All Rights Reserved.
       </p>
     </footer>
   );

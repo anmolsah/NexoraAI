@@ -18,21 +18,29 @@ const AiTools = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap mt-10 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
         {AiToolsData.map((tool, index) => (
           <div
-            className="p-8 m-4 max-w-xs rounded-lg bg-[#FDFDFE] shadow-lg border border-gray-100 hover:transition-y-1 transition-all duration-300 cursor-pointer"
+            className="p-8 rounded-lg bg-white shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
             key={index}
             onClick={() => user && navigate(tool.path)}
+            style={{
+              "--glow-from": tool.bg.from,
+              "--glow-to": tool.bg.to,
+            }}
           >
-            <tool.Icon
-              className="w-12 h-12 p-3 text-white rounded-xl"
+            <div
+              className="w-16 h-16 p-4 text-white rounded-xl transition-all duration-300 group-hover:shadow-[0_0_30px] group-hover:shadow-[var(--glow-from)]"
               style={{
-                background: `linear-gradient(to bottom, ${tool.bg.from} , ${tool.bg.to})`,
+                background: `linear-gradient(to bottom, ${tool.bg.from}, ${tool.bg.to})`,
               }}
-            />
-            <h3 className="mt-6 mb-3 text-lg font-semibold">{tool.title}</h3>
-            <p className="text-gray-400 text-sm max-w-[95%]">
+            >
+              <tool.Icon className="w-full h-full" />
+            </div>
+            <h3 className="mt-6 mb-3 text-xl font-semibold text-slate-800">
+              {tool.title}
+            </h3>
+            <p className="text-gray-500 text-sm max-w-[95%]">
               {tool.description}
             </p>
           </div>

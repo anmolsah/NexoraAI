@@ -134,6 +134,57 @@ NexoraAI/
    - Frontend: `http://localhost:5173`
    - Backend API: `http://localhost:8888`
 
+## 🐳 Running with Docker (Recommended for Easy Setup)
+
+If you don't want to install [Node.js](https://nodejs.org) or run `npm install` manually, you can use [Docker](https://www.docker.com/) for an easier setup.
+
+### 📋 Prerequisites
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed
+- [Docker Compose](https://docs.docker.com/compose/) (comes bundled with Docker Desktop)
+
+---
+
+### ⚡ Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone git@github.com:anmolsah/NexoraAI.git
+   cd NexoraAI
+````
+
+2. **Add `.env` files**
+
+   * Create and fill the following files:
+
+     * `client/.env`
+     * `server/.env`
+
+3. **Run using Docker Compose**
+
+   ```bash
+   docker-compose up --build
+   ```
+
+4. **Access the application**
+
+   * Frontend (client):
+
+     ```
+     http://localhost:80
+     ```
+   * Backend API (server):
+
+     ```
+     http://localhost:8888
+     ```
+
+---
+
+✅ **No need to install Node.js, npm, or run `npm install` — Docker handles everything for you!**
+
+```
+
+
 ## 💡 Usage
 
 1. **Sign Up/Login**: Create an account or sign in using Clerk authentication

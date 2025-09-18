@@ -136,54 +136,28 @@ NexoraAI/
 
 ## 🐳 Running with Docker (Recommended for Easy Setup)
 
-If you don't want to install [Node.js](https://nodejs.org) or run `npm install` manually, you can use [Docker](https://www.docker.com/) for an easier setup.
+To run the application using Docker, follow these steps:
 
-### 📋 Prerequisites
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed
-- [Docker Compose](https://docs.docker.com/compose/) (comes bundled with Docker Desktop)
+1.  **Ensure Docker is running** on your machine.
+2.  **Environment Setup**: Create the `.env` files in the `server` and `client` directories as described in the [Environment Setup](#environment-setup) section.
+3.  **Build and run the containers in detached mode**:
+    ```bash
+    docker-compose up --build
 
----
+    ```
+4.  **Access the application**:
+    -   Frontend: `http://localhost`
+    -   Backend API: `http://localhost:8888`
 
-### ⚡ Steps
-
-1. **Clone the repository**
-   ```bash
-   git clone git@github.com:anmolsah/NexoraAI.git
-   cd NexoraAI
-````
-
-2. **Add `.env` files**
-
-   * Create and fill the following files:
-
-     * `client/.env`
-     * `server/.env`
-
-3. **Run using Docker Compose**
-
-   ```bash
-   docker-compose up --build
-   ```
-
-4. **Access the application**
-
-   * Frontend (client):
-
-     ```
-     http://localhost:80
-     ```
-   * Backend API (server):
-
-     ```
-     http://localhost:8888
-     ```
-
----
-
-✅ **No need to install Node.js, npm, or run `npm install` — Docker handles everything for you!**
-
+To view logs:
+```bash
+docker-compose logs -f
 ```
 
+To stop the application:
+```bash
+docker-compose down
+```
 
 ## 💡 Usage
 

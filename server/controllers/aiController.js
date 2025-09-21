@@ -11,7 +11,6 @@ const AI = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
 });
 
-
 export const generateArticle = async (req, res) => {
   try {
     const { userId } = req.auth();

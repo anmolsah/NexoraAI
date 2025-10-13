@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useUser,useAuth } from "@clerk/clerk-react";
+import { useUser, useAuth } from "@clerk/clerk-react";
 import { dummyPublishedCreationData } from "../assets/assets";
 import { Heart } from "lucide-react";
 import axios from "axios";
@@ -93,11 +93,11 @@ const Community = () => {
         ))}
       </div>
     </div>
-  ):(
+  ) : (
     <div className="flex justify-center items-center h-full">
-      <span className='w-10 h-10 my-1 rounded-full border-3 border-primary border-t-transparent animate-spin'></span>
+      <span className="w-10 h-10 my-1 rounded-full border-3 border-primary border-t-transparent animate-spin"></span>
     </div>
-  )
+  );
 };
 
 export default Community;

@@ -25,7 +25,6 @@ const RemoveBackground = () => {
         {
           headers: {
             Authorization: `Bearer ${await getToken()}`,
-            
           },
         }
       );
